@@ -1,5 +1,8 @@
 import React from "react";
 import {register} from '../utils/register';
+import { Navigate } from "react-router-dom";
+
+
 const Swal = require('sweetalert2')
 
 function Register() {
@@ -25,7 +28,7 @@ function Register() {
             }
             }).then((result) => {
             if (result.dismiss === Swal.DismissReason.timer) {
-                window.location.href = `${window.location.origin}/gestor-de-gastos/home`
+                <Navigate to='gestor-de-gastos/home'/>
             }
         })
     }

@@ -1,11 +1,12 @@
 import React from "react";
+import {Navigate} from 'react-router-dom';
 import {login} from '../utils/login';
 
 function Login () {
     const token = localStorage.getItem('token');
     
     if(token) {
-        window.location.href = `${window.location.origin}/gestor-de-gastos/home`
+        <Navigate to='gestor-de-gastos/home'/>
     }
 
     return (

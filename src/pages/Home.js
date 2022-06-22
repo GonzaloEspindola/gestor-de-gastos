@@ -1,4 +1,5 @@
 import React, {useEffect, useState} from "react";
+import {Navigate} from 'react-router-dom';
 /* LAYOUT */
 import {LayoutApp} from '../layout/LayoutApp';
 
@@ -17,8 +18,8 @@ function Home({rute}) {
     const token = localStorage.getItem('token')
     
     if(!token) {
-        window.location = `${window.location.origin}/gestor-de-gastos/login`
-        }
+        <Navigate to='gestor-de-gastos/login'/>
+    }
 
     const options = {
         headers: {
