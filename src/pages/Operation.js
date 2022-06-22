@@ -1,4 +1,4 @@
-import React from "react";
+import React, {useState, useEffect} from "react";
 
 /* LAYOUT */
 import {LayoutApp} from '../layout/LayoutApp';
@@ -6,13 +6,28 @@ import {LayoutApp} from '../layout/LayoutApp';
 /* Components */
 import {Operations} from '../components/Operations';
 
-function Operation({operations, setOperations, rute}) {
+function Operation({rute}) {
 
-    // const token = localStorage.getItem('token');
+   const [operations, setOperations] = useState([]);
 
-    // if(!token) {
-    // window.location = `${window.location.origin}/gestor-de-gastos/login`
-    // }
+    const token = localStorage.getItem('token')
+    
+    if(!token) {
+        window.location = `${window.location.origin}/gestor-de-gastos/login`
+        }
+
+    const options = {
+        headers: {
+        'Authorization': `Bearer ${token}`
+        }
+    }
+        useEffect(() => {
+            (async function () {
+                let data = await fetch('https://serene-brook-59719.herokuapp.com/tables', options)
+                .then(data => data.json())
+                .then(data => setOperations(data))
+            })();
+    }, [])
 
     return (
         <LayoutApp>

@@ -35,40 +35,6 @@ function Operations ({operations, setOperations, rute}) {
                 )
             })
             break;
-
-        case "incomes":
-            var display = operations.map(operation => {
-                if(operation._type === "Ingreso"){
-                    return (
-                        <tr key={operation._idoperation} id={operation._idoperation}>
-                            <td><input className={`${operation._idoperation} concept${operation._idoperation}`} placeholder={operation._concept} type="text" disabled/></td>
-                            <td><input className={`${operation._idoperation} ammount${operation._idoperation}`} placeholder={operation._ammount} type="number" disabled/></td>
-                            <td><input className={`${operation._idoperation} date${operation._idoperation}`} placeholder={operation._date} type="text" disabled/></td>
-                            <td><input className={`${operation._idoperation} type${operation._idoperation}`} placeholder={operation._type} type="text" disabled/></td>
-                            <td><input className={`${operation._idoperation} category${operation._idoperation}`} placeholder={operation._category} type="text" disabled/></td>
-                            <td><a className={`updateButton${operation._idoperation}`} onClick={() => styleUpdate(operation._idoperation)}><i className={`bx bx-message-square-edit bx-sm bx-tada-hover updateButton${operation._idoperation} update`}></i></a><a onClick={() => deleteOperation(operation._idoperation, {setOperations})}><i className='bx bx-message-square-x bx-sm bx-tada-hover delete'></i></a></td>
-                        </tr>
-                    )
-                }
-            })
-            break;
-
-        case "expenses":
-            var display = operations.map(operation => {
-                if(operation._type === "Egreso"){
-                    return (
-                        <tr key={operation._idoperation} id={operation._idoperation}>
-                            <td><input className={`${operation._idoperation} concept${operation._idoperation}`} placeholder={operation._concept} type="text" disabled/></td>
-                            <td><input className={`${operation._idoperation} ammount${operation._idoperation}`} placeholder={operation._ammount} type="number" disabled/></td>
-                            <td><input className={`${operation._idoperation} date${operation._idoperation}`} placeholder={operation._date} type="text" disabled/></td>
-                            <td><input className={`${operation._idoperation} type${operation._idoperation}`} placeholder={operation._type} type="text" disabled/></td>
-                            <td><input className={`${operation._idoperation} category${operation._idoperation}`} placeholder={operation._category} type="text" disabled/></td>
-                            <td><a className={`updateButton${operation._idoperation}`} onClick={() => styleUpdate(operation._idoperation)}><i className={`bx bx-message-square-edit bx-sm bx-tada-hover updateButton${operation._idoperation} update`}></i></a><a onClick={() => deleteOperation(operation._idoperation, {setOperations})}><i className='bx bx-message-square-x bx-sm bx-tada-hover delete'></i></a></td>
-                        </tr>
-                    )
-                }
-            })
-            break;
     }
 
     return <>

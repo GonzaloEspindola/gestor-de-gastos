@@ -1,4 +1,4 @@
-import React from "react";
+import React, {useEffect, useState} from "react";
 /* LAYOUT */
 import {LayoutApp} from '../layout/LayoutApp';
 
@@ -10,7 +10,28 @@ import { AddOperation } from "../components/AddOperation";
 /* utils */
 
 
-function Home({operations, setOperations, rute}) {
+function Home({rute}) {
+
+    const [operations, setOperations] = useState([]);
+
+    const token = localStorage.getItem('token')
+    
+    if(!token) {
+        window.location = `${window.location.origin}/gestor-de-gastos/login`
+        }
+
+    const options = {
+        headers: {
+        'Authorization': `Bearer ${token}`
+        }
+    }
+        useEffect(() => {
+            (async function () {
+                let data = await fetch('https://serene-brook-59719.herokuapp.com/tables', options)
+                .then(data => data.json())
+                .then(data => setOperations(data))
+            })();
+    }, [])
 
     function Ingresos(){
         var ingresos = 0;
@@ -39,12 +60,6 @@ function Home({operations, setOperations, rute}) {
     const ingresos = Ingresos();
     const egresos = Egresos();
     const total = ingresos - egresos;
-
-    // const token = localStorage.getItem('token');
-
-    // if(!token) {
-    // window.location = `${window.location.origin}/gestor-de-gastos/login`
-    // }
 
     return (
         <LayoutApp>
