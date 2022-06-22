@@ -28,7 +28,7 @@ function Register() {
             }
             }).then((result) => {
             if (result.dismiss === Swal.DismissReason.timer) {
-                <Navigate to='gestor-de-gastos/home'/>
+                <Navigate to='/home'/>
             }
         })
     }

@@ -11,17 +11,15 @@ import {Register} from '../pages/Register';
 
 const RoutesApp = () => (
 
-    <Router>
+    <Router basename='/gestor-de-gastos'>
         <Routes>
-          <Route path='/gestor-de-gastos'>
-            <Route path='/gestor-de-gastos/' element={<Home rute="home"/>}></Route>
-            <Route path='home' element={<Home rute="home"/>}></Route>
-            <Route path='operations' element={<Operation rute="operations"/>}></Route>
-            <Route path='*' element={<Error404/>}></Route>
+            <Route path='/' element={<Home rute="home"/>}></Route>
+            <Route path='/home' element={<Home rute="home"/>}></Route>
+            <Route path='/operations' element={<Operation rute="operations"/>}></Route>
+            <Route path='/*' element={<Error404/>}></Route>
 
-            <Route path='login' element={<Login/>}></Route>
-            <Route path='register' element={<Register/>}></Route>
-          </Route>
+            <Route path='/login' element={<Login/>}></Route>
+            <Route path='/register' element={<Register/>}></Route>
       </Routes>
   </Router>
 );
