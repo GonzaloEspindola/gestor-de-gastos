@@ -40,11 +40,11 @@ function Home({operations, setOperations, rute}) {
     const egresos = Egresos();
     const total = ingresos - egresos;
 
-    const token = localStorage.getItem('token');
+    // const token = localStorage.getItem('token');
 
-    if(!token) {
-    window.location = `${window.location.origin}/gestor-de-gastos/login`
-    }
+    // if(!token) {
+    // window.location = `${window.location.origin}/gestor-de-gastos/login`
+    // }
 
     return (
         <LayoutApp>

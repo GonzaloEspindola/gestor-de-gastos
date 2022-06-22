@@ -2,11 +2,11 @@ import React from "react";
 import {login} from '../utils/login';
 
 function Login () {
-    const token = localStorage.getItem('token');
+    // const token = localStorage.getItem('token');
     
-    if(token) {
-        window.location.href = `${window.location.origin}/gestor-de-gastos/home`
-    }
+    // if(token) {
+    //     window.location.href = `${window.location.origin}/gestor-de-gastos/home`
+    // }
 
     return (
         <section className="login">

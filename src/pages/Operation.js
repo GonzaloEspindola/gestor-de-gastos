@@ -8,11 +8,11 @@ import {Operations} from '../components/Operations';
 
 function Operation({operations, setOperations, rute}) {
 
-    const token = localStorage.getItem('token');
+    // const token = localStorage.getItem('token');
 
-    if(!token) {
-    window.location = `${window.location.origin}/gestor-de-gastos/login`
-    }
+    // if(!token) {
+    // window.location = `${window.location.origin}/gestor-de-gastos/login`
+    // }
 
     return (
         <LayoutApp>
