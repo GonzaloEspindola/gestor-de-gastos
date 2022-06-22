@@ -5,7 +5,7 @@ function Login () {
     const token = localStorage.getItem('token');
     
     if(token) {
-        window.location.href = `${window.location.origin}/home`
+        window.location.href = `${window.location.origin}/gestor-de-gastos/home`
     }
 
     return (

@@ -49,7 +49,7 @@ async function register(params) {
             }
             }).then((result) => {
             if (result.dismiss === Swal.DismissReason.timer) {
-                window.location.href = `${window.location.origin}/login`
+                window.location.href = `${window.location.origin}/gestor-de-gastos/login`
             }
             })
         }

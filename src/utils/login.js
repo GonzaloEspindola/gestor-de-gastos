@@ -25,7 +25,7 @@ async function login(params) {
             }else if(email === res.user._email){
                 localStorage.setItem('token', res.token)
                 console.log(localStorage.getItem('token'))
-                window.location.href = `${window.location.origin}/home`
+                window.location.href = `${window.location.origin}/gestor-de-gastos/home`
             }
         })
 
