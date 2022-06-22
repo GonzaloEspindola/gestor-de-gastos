@@ -1,5 +1,4 @@
 import React, {useState, useEffect} from "react";
-import {Navigate} from 'react-router-dom';
 
 /* LAYOUT */
 import {LayoutApp} from '../layout/LayoutApp';
@@ -14,7 +13,7 @@ function Operation({rute}) {
     const token = localStorage.getItem('token')
     
     if(!token) {
-        <Navigate to='gestor-de-gastos/login'/>
+        window.location = "/gestor-de-gastos/login"
     }
 
     const options = {

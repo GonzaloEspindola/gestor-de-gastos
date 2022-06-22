@@ -16,9 +16,9 @@ function Home({rute}) {
     const [operations, setOperations] = useState([]);
 
     const token = localStorage.getItem('token')
-    
-    if(!token) {
-        <Navigate to='gestor-de-gastos/login'/>
+
+    if(!localStorage.getItem('token')) {
+        window.location = '/gestor-de-gastos/login';
     }
 
     const options = {

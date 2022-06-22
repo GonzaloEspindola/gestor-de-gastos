@@ -16,7 +16,6 @@ async function register(params) {
             })
         })
         
-        console.log(registerAccount)
 
         if(registerAccount.statusText === "Bad Request"){
             Swal.fire({
@@ -27,7 +26,7 @@ async function register(params) {
             Swal.fire({
                 icon: 'error',
                 title: 'Este correo ya esta registrado',
-                footer: '<a href="/login">Iniciar sesion</a>'
+                footer: '<a href="/gestor-de-gastos/login">Iniciar sesion</a>'
             })
         }else if(registerAccount.statusText === "OK"){
             let timerInterval
@@ -49,7 +48,7 @@ async function register(params) {
             }
             }).then((result) => {
             if (result.dismiss === Swal.DismissReason.timer) {
-                window.location.href = `${window.location.origin}/gestor-de-gastos/login`
+                window.location.href = `/gestor-de-gastos/login`
             }
             })
         }

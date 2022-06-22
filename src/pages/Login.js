@@ -1,13 +1,12 @@
 import React from "react";
-import {Navigate} from 'react-router-dom';
 import {login} from '../utils/login';
 
 function Login () {
-    // const token = localStorage.getItem('token');
+    const token = localStorage.getItem('token');
     
-    // if(token) {
-    //     <Navigate to='gestor-de-gastos/home'/>
-    // }
+    if(token) {
+        window.location = "/gestor-de-gastos/home"
+    }
 
     return (
         <section className="login">
