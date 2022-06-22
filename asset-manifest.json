@@ -1,13 +1,13 @@
 {
   "files": {
     "main.css": "/gestor-de-gastos/static/css/main.beee8397.css",
-    "main.js": "/gestor-de-gastos/static/js/main.65e639bf.js",
+    "main.js": "/gestor-de-gastos/static/js/main.63b110fe.js",
     "index.html": "/gestor-de-gastos/index.html",
     "main.beee8397.css.map": "/gestor-de-gastos/static/css/main.beee8397.css.map",
-    "main.65e639bf.js.map": "/gestor-de-gastos/static/js/main.65e639bf.js.map"
+    "main.63b110fe.js.map": "/gestor-de-gastos/static/js/main.63b110fe.js.map"
   },
   "entrypoints": [
     "static/css/main.beee8397.css",
-    "static/js/main.65e639bf.js"
+    "static/js/main.63b110fe.js"
   ]
 }
