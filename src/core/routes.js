@@ -11,15 +11,15 @@ import {Register} from '../pages/Register';
 const RoutesApp = ({operations, setOperations}) => (
     <Router>
         <Routes>
-          <Route path='/' element={<Home operations={operations} setOperations={setOperations} rute="home"/>}></Route>
-          <Route path='/home' element={<Home operations={operations} setOperations={setOperations} rute="home"/>}></Route>
-          <Route path='/operations' element={<Operation operations={operations} setOperations={setOperations} rute="operations"/>}></Route>
-          <Route path='/operations/incomes' element={<Operation operations={operations} setOperations={setOperations} rute="incomes"/>}></Route>
-          <Route path='/operations/expenses' element={<Operation operations={operations} setOperations={setOperations} rute="expenses"/>}></Route>
-          <Route path='/:rest' element={<Error404/>}></Route>
+          <Route path='/gestor-de-gastos/' element={<Home operations={operations} setOperations={setOperations} rute="home"/>}></Route>
+          <Route path='/gestor-de-gastos/home' element={<Home operations={operations} setOperations={setOperations} rute="home"/>}></Route>
+          <Route path='/gestor-de-gastos/operations' element={<Operation operations={operations} setOperations={setOperations} rute="operations"/>}></Route>
+          <Route path='/gestor-de-gastos/operations/incomes' element={<Operation operations={operations} setOperations={setOperations} rute="incomes"/>}></Route>
+          <Route path='/gestor-de-gastos/operations/expenses' element={<Operation operations={operations} setOperations={setOperations} rute="expenses"/>}></Route>
+          <Route path='/gestor-de-gastos/:rest' element={<Error404/>}></Route>
 
-          <Route path='/login' element={<Login/>}></Route>
-          <Route path='/register' element={<Register/>}></Route>
+          <Route path='/gestor-de-gastos/login' element={<Login/>}></Route>
+          <Route path='/gestor-de-gastos/register' element={<Register/>}></Route>
       </Routes>
   </Router>
 );
