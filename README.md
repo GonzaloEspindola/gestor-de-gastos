@@ -7,7 +7,7 @@ Cuenta demo:
  - Email: admindemo@demo.com
  - Contraseña: admin123
 
-![](https://i.postimg.cc/tgQzSJ9H/gonzaloespindola-github-io-leagueoflegends-spa.png)
+![](https://i.ibb.co/Swqf2XP/image.png)
 
 
 ## License
