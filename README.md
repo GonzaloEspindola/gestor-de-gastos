@@ -18,7 +18,7 @@
 <!-- ABOUT THE PROJECT -->
 ## Sobre el proyecto
 
-![](https://2s9e3bif52.execute-api.eu-central-1.amazonaws.com/production/screenshot?url=https://gonzaloespindola.github.io/gestor-de-gastos/login&color=)
+![](https://i.ibb.co/g9M4gKD/screenshot.png)
 
 Pagina web realizada como resolucion a un challenge presentado por Alkemy, la misma se basa en un gestor de gastos con CRUD donde podamos gestionar ingresos y egresos de dinero teniendo datos como, concepto, monto, fecha y categoria. Pudiendo editar y eliminar cualquiera de estas entradas. Sumado a eso, cuenta con sistema de registro y login, manejado con JWT desde el servidor.
 
