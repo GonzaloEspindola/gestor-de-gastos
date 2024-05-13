@@ -49,7 +49,7 @@ Puedes utilizar el proyecto y sentirte libre de cambiar lo que quieras.
    ```
 3. Crea un archivo .env en la raiz del proyecto siguiendo el siguiente esquema.
     ```sh
-      DB_USER: '',
+      DB_USER: '3015227',
       DB_PASSWORD: '',
       DB_HOST: '',
       DB_NAME: '',
